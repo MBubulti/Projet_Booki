@@ -1,0 +1,41 @@
+/***** General *****/
+* {
+    font-family: 'Raleway', sans-serif;
+    padding:0;
+    margin:0;
+}
+
+/* Définition du code couleur qui seront mobilisés à travers tout le css dans :root
+On utilise des propriétés personnalisées -- qui permettront d'être rappelée ensuite dans le doc*/
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+/***** Header *****/
+    /*Organisation du header global, positionnement des éléments & apparence*/
+    .boxHeader{
+        display: flex;
+        justify-content: space-between;
+    }
+    .navLien{
+        display: flex;
+        margin-right:30px;
+        gap:40px;
+    }
+    .logo{
+        align-self: flex-start;
+        height: 20px;
+        padding-left: 50px;
+        padding-top: 30px;
+    }
+    .lienHeader:hover{
+        color:var(--main-color);
+        border-top: 2px solid var(--main-color);
+    }
+    .lienHeader{
+        padding-top: 10px;
+    }
+
+/***** Espace Recherche & Filtre*****/
