@@ -1,41 +1,125 @@
 /***** General *****/
 * {
-    font-family: 'Raleway', sans-serif;
-    padding:0;
-    margin:0;
+  font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin: 0;
+  max-width: 1440px;
 }
 
 /* Définition du code couleur qui seront mobilisés à travers tout le css dans :root
 On utilise des propriétés personnalisées -- qui permettront d'être rappelée ensuite dans le doc*/
 :root {
-    --main-color: #0065FC;
-    --main-bg-color: #F2F2F2;
-    --filter-bg-color: #DEEBFF;
+  --main-color: #0065fc;
+  --main-bg-color: #f2f2f2;
+  --filter-bg-color: #deebff;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+p {
+  font-size: 18px;
+  font-weight: 400;
+}
+h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.fa-solid {
+    color: var(--main-color);
+}
 /***** Header *****/
-    /*Organisation du header global, positionnement des éléments & apparence*/
-    .boxHeader{
-        display: flex;
-        justify-content: space-between;
-    }
-    .navLien{
-        display: flex;
-        margin-right:30px;
-        gap:40px;
-    }
-    .logo{
-        align-self: flex-start;
-        height: 20px;
-        padding-left: 50px;
-        padding-top: 30px;
-    }
-    .lienHeader:hover{
-        color:var(--main-color);
-        border-top: 2px solid var(--main-color);
-    }
-    .lienHeader{
-        padding-top: 10px;
-    }
+/*Organisation du header global, positionnement des éléments & apparence*/
+.boxHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.navLien {
+  display: flex;
+  margin-right: 30px;
+  gap: 40px;
+}
+.logo {
+  align-self: flex-start;
+  height: 20px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.lienHeader:hover {
+  color: var(--main-color);
+  border-top: 2px solid var(--main-color);
+}
+.lienHeader {
+  padding-top: 10px;
+}
 
-/***** Espace Recherche & Filtre*****/
+/***** Espace Recherche & Filtress*****/
+main {
+  margin: 30px;
+}
+/*Organisation Position & apparence de la barre de recherche*/
+.searchBar {
+  display: flex;
+  height: 49px;
+  width: 377px;
+  align-items: center;
+  margin: 30px 0px 30px 0px;
+}
+.positionPin {
+  background-color: var(--main-bg-color);
+  height: 18px;
+  width: 27px;
+  padding: 11px 0px 11px 15px;
+  border-radius: 12px 0px 0px 12px;
+}
+button {
+  color: white;
+  background-color: var(--main-color);
+  border: none;
+  margin-left: -5px;
+  padding: 8px 12px 11px 12px;
+  border-radius: 0px 12px 12px 0px;
+  font-weight: 700;
+  font-size: 18px;
+}
+#search {
+  height: 40px;
+  width: 200px;
+  border: none;
+  border-top: 1px solid var(--main-bg-color);
+  border-bottom: 1px solid var(--main-bg-color);
+  padding: 11px;
+}
+::placeholder {
+  text-align: center;
+  color: black;
+  opacity: 1;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/*Temporaire - pour cacher la loupe de la version mobile*/
+#loupe {
+  display: none;
+}
+
+/*Organisation & Apparence de l'espace Filtres*/
+.boxFilters {
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 30px 0px;
+  gap: 20px;
+}
+.filter{
+    border: 3px solid var(--main-bg-color);
+    padding: 10px;
+    border-radius: 25px;
+}
+.filter:hover{
+    background-color: var(--filter-bg-color);
+}
