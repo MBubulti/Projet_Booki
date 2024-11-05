@@ -47,7 +47,7 @@ h2 {
 .logo {
   align-self: flex-start;
   height: 20px;
-  padding-left: 30px;
+  padding-left: 50px;
   padding-top: 30px;
 }
 .lienHeader:hover {
@@ -58,9 +58,11 @@ h2 {
   padding-top: 10px;
 }
 
-/***** Espace Recherche & Filtress*****/
+/***** Espace Recherche & Filtres*****/
 main {
-  margin: 30px;
+  margin: 0 50px;
+  width: 100%;
+  box-sizing: border-box;
 }
 /*Organisation Position & apparence de la barre de recherche*/
 .searchBar {
@@ -70,6 +72,7 @@ main {
   align-items: center;
   margin: 30px 0px 30px 0px;
 }
+/*Icone position gps*/
 .positionPin {
   background-color: var(--main-bg-color);
   height: 18px;
@@ -77,6 +80,7 @@ main {
   padding: 11px 0px 11px 15px;
   border-radius: 12px 0px 0px 12px;
 }
+/*Bouton rechercher*/
 button {
   color: white;
   background-color: var(--main-color);
@@ -87,6 +91,7 @@ button {
   font-weight: 700;
   font-size: 18px;
 }
+/*Zone de texte Recherche*/
 #search {
   height: 40px;
   width: 200px;
@@ -122,4 +127,35 @@ button {
 }
 .filter:hover{
     background-color: var(--filter-bg-color);
+}
+
+/*Gestion des cards - apparence et organisation*/
+.flexHebergement{
+  display: flex;
+  justify-content: space-between;
+}
+.boxHebergement{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--main-bg-color);
+  border-radius: 10px;
+  box-sizing:border-box ;
+}
+.boxHebergement img{
+  object-fit: cover;
+}
+.hebergement{
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0,0,0,0.1));
+}
+.hebergementPopulaire{
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0,0,0,0.1));
 }
