@@ -1,0 +1,312 @@
+/***** General *****/
+* {
+    font-family: "Raleway", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  /* Définition du code couleur qui seront mobilisés à travers tout le css dans :root
+  On utilise des propriétés personnalisées -- qui permettront d'être rappelée ensuite dans le doc*/
+  :root {
+    --main-color: #0065fc;
+    --main-bg-color: #f2f2f2;
+    --filter-bg-color: #deebff;
+  }
+  main {
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box; /*Permet de faciliter la mise en page des éléments dans le main en définissant la box à 100% de 1440px et ensuite tous les éléments que nou définiront s'inclueront dedans*/
+    margin: 0 50px;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  h1 {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .fa-solid {
+    color: var(--main-color);
+  }
+  ul {
+    list-style-type: none;
+  }
+  article {
+    margin-bottom: 30px;
+  }
+  ::placeholder {
+    /*Visuel des éléments placeholder*/
+    text-align: center;
+    color: black;
+    opacity: 1;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .neutral-star {
+    color: var(--main-bg-color);
+  }
+  .euro {
+    font-weight: 700;
+  }
+  /***** Header *****/
+  /*Disposition boxHeader*/
+  .boxHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .lienHeader {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-right: 30px;
+    padding-top: 0px;
+  }
+  
+  .lienHeader li a {
+    /*Apparence des deux liens du nav*/
+    display: inline-block;
+    padding-top: 10px;
+  }
+  .lienHeader li a:hover {
+    border-top: 2px solid var(--main-color);
+    color: var(--main-color);
+  }
+  .logo {
+    /*Placement du logo*/
+    height: 20px;
+    margin-left: 50px;
+    margin-top: 30px;
+  }
+  /***** Espace Recherche & Filtres*****/
+  .searchBar {
+    /*Organisation de la barre de recherche*/
+    display: flex;
+    height: 50px;
+    width: 375px;
+    align-items: center;
+  }
+  .positionPin {
+    /*Pin de position fond + border*/
+    background-color: var(--main-bg-color);
+    height: 19px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 15px 0px 0px 15px;
+  }
+  .searchForm {
+    /*Formulaire de recherche bordures + alignement*/
+    height: 47px;
+    align-content: center;
+    border-top: 1px solid var(--main-bg-color);
+    border-bottom: 1px solid var(--main-bg-color);
+  }
+  .searchForm input {
+    /*aspect visuel de l'input & dimension*/
+    border: none;
+    width: 180px;
+  }
+  button {
+    /*Modifications générales des éléments buttons*/
+    color: white;
+    background-color: var(--main-color);
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .btnTxt {
+    /*Modifications du bouton Rechercher*/
+    padding: 12.5px 15px 15px 14px;
+    border-radius: 0px 15px 15px 0px;
+  }
+  .btnLoupe {
+    /*Modifications du bouton Loupe*/
+    display: none;
+    margin-left: -10px;
+    padding: 14px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px #d2d2d2;
+  }
+  /*Organisation & Apparence des filtres*/
+  .boxFilters {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .filtre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border: 3px solid var(--main-bg-color);
+    padding: 10px 12px 10px 12px;
+    border-radius: 25px;
+  }
+  .filtre:hover {
+    background-color: var(--filter-bg-color);
+  }
+  .infoTxt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+
+
+
+
+
+
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+.hebergements {
+    width: 65%;
+}
+.boxHebergement {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-bg-color);
+    border-radius: 10px;
+    padding: 30px 30px 20px 30px;
+    box-sizing: border-box;
+    gap: 20px;
+    width: 100%;
+    height: 520px;
+  }
+  /*Box Cartes Hebergements*/
+  .boxCards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    gap: 30px;
+  }
+  /*Cartes Hébergements*/
+  .cardHebergement {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: white;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    border-radius: 25px;
+    padding: 5px;
+    width: 30%;
+    height: 200px;
+  }
+  .cardHebergement img {
+    width: 100%;
+    height: 120px;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+  }
+  .cardHebergement h3 {
+    margin-top: 3px;
+    margin-bottom: 4px;
+  }
+  .card-rating {
+    margin-bottom: 5px;
+  }
+  .cardTxt {
+    margin-left: 15px;
+  }
+  
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
