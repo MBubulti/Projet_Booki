@@ -38,7 +38,7 @@
         <div class="navLien">
           <nav>
             <ul class="lienHeader">
-              <li><a href="#">Hébergement</a></li>
+              <li><a href="#">Hébergements</a></li>
               <li><a href="#">Activités</a></li>
             </ul>
           </nav>
@@ -47,7 +47,7 @@
     </header>
     <main>
       <!--Création d'une première section espace Titre/Recherche/Filtres-->
-      <section>
+      <section class="searchSpace">
         <!--Article txtTitre-->
         <article>
           <div class="txtTitre">
@@ -60,7 +60,7 @@
           <div class="searchBar">
             <!--Icone Position-->
             <div class="positionPin">
-              <i style="color: black" class="fa-solid fa-location-dot"></i>
+              <i class="fa-solid fa-location-dot black"></i>
             </div>
             <!--Formulaire Recherche-->
             <div class="searchForm">
@@ -79,10 +79,7 @@
                 Rechercher
               </button>
               <button class="btnLoupe" type="submit" form="form">
-                <i
-                  style="color: white"
-                  class="fa-solid fa-magnifying-glass"
-                ></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
           </div>
@@ -91,12 +88,12 @@
         <article>
           <div class="boxFilters">
             <h2>Filtres</h2>
-            <a href="#"
-              ><div class="filtre">
+            <a href="#">
+                <div class="filtre">
                 <i class="fa-solid fa-money-bill-wave"></i>
                 <h3>Économique</h3>
-              </div></a
-            >
+                </div>
+              </a>
             <a href="#"
               ><div class="filtre">
                 <i class="fa-solid fa-person"></i>
@@ -423,7 +420,8 @@
           </div>
         </section>
       </div>
-      <section>
+      <!--Partie Cartes Activités-->
+      <section class="sectionActivites">
         <div class="titreActivites">
           <h2>Activités à Marseille</h2>
         </div>
@@ -441,67 +439,67 @@
               </div>
             </a>
             <a href="#">
-                <article class="carteA">
-                  <img
-                    src="./images/activites/paul-hermann.jpg"
-                    alt="Une photo du fort de Pomègues"
-                  />
-                </article>
-                <div class="activiteTxt">
-                    <h3>Fort de Pomègues</h3>
-                </div>
-              </a>
-              <a href="#">
-                <article class="carteA">
-                  <img
-                    src="./images/activites/kilyan-sockalingum.jpg"
-                    alt="Une photo du parc national des Calanques"
-                  />
-                </article>
-                <div class="activiteTxt">
-                    <h3>Parc national des Calanques</h3>
-                </div>
-              </a>
-              <a href="#">
-                <article class="carteA">
-                  <img
-                    src="./images/activites/florian-wehde.jpg"
-                    alt="Une photo de Notre-Dame-de-la-Garde"
-                  />
-                </article>
-                <div class="activiteTxt">
-                    <h3>Notre-Dame-de-la-Garde</h3>
-                </div>
-              </a>
+              <article class="carteA">
+                <img
+                  src="./images/activites/paul-hermann.jpg"
+                  alt="Une photo du fort de Pomègues"
+                />
+              </article>
+              <div class="activiteTxt">
+                <h3>Fort de Pomègues</h3>
+              </div>
+            </a>
+            <a href="#">
+              <article class="carteA">
+                <img
+                  src="./images/activites/kilyan-sockalingum.jpg"
+                  alt="Une photo du parc national des Calanques"
+                />
+              </article>
+              <div class="activiteTxt">
+                <h3>Parc national des Calanques</h3>
+              </div>
+            </a>
+            <a href="#">
+              <article class="carteA">
+                <img
+                  src="./images/activites/florian-wehde.jpg"
+                  alt="Une photo de Notre-Dame-de-la-Garde"
+                />
+              </article>
+              <div class="activiteTxt">
+                <h3>Notre-Dame-de-la-Garde</h3>
+              </div>
+            </a>
           </div>
         </div>
       </section>
     </main>
     <footer>
-        <div class="boxFooterGlobale">
-            <section class="">
-                <h2>À propos</h2>
-                <ul>
-                    <li>Fonctionnement du site</li>
-                    <li>Conditions générales</li>
-                    <li>Données et confidentialité</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Nos Hébergements</h2>
-                <ul>
-                    <li>Charte qualité</li>
-                    <li>Proposer votre hôtel</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Assistance</h2>
-                <ul>
-                    <li>Centre d'aide</li>
-                    <li>Nous contacter</li>
-                </ul>
-            </section>
-        </div>
+      <div class="boxFooterGlobale">
+        <section class="">
+          <h2>À propos</h2>
+          <ul>
+            <li>Fonctionnement du site</li>
+            <li>Conditions générales</li>
+            <li>Données et confidentialité</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Nos Hébergements</h2>
+          <ul>
+            <li>Charte qualité</li>
+            <li>Proposer votre hôtel</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Assistance</h2>
+          <ul>
+            <li>Centre d'aide</li>
+            <li>Nous contacter</li>
+          </ul>
+        </section>
+      </div>
     </footer>
   </body>
 </html>
