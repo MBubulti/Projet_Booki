@@ -1,11 +1,9 @@
-/***** General *****/
+/****** General ***********/
 * {
   font-family: "Raleway", sans-serif;
   padding: 0;
   margin: 0;
-  max-width: 1440px;
 }
-
 /* Définition du code couleur qui seront mobilisés à travers tout le css dans :root
 On utilise des propriétés personnalisées -- qui permettront d'être rappelée ensuite dans le doc*/
 :root {
@@ -13,10 +11,27 @@ On utilise des propriétés personnalisées -- qui permettront d'être rappelée
   --main-bg-color: #f2f2f2;
   --filter-bg-color: #deebff;
 }
-
-a {
-  text-decoration: none;
+main {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 50px;
+}
+header {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 50px;
+}
+.fa-solid {
+  color: var(--main-color);
+}
+.black {
   color: black;
+}
+a {
+  color: inherit;
+  text-decoration: none;
 }
 p {
   font-size: 18px;
@@ -27,99 +42,316 @@ h1 {
   font-weight: 700;
 }
 h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+h3 {
   font-size: 18px;
   font-weight: 700;
 }
-.fa-solid {
-    color: var(--main-color);
-}
-/***** Header *****/
-/*Organisation du header global, positionnement des éléments & apparence*/
-.boxHeader {
-  display: flex;
-  justify-content: space-between;
-}
-.navLien {
-  display: flex;
-  margin-right: 30px;
-  gap: 40px;
-}
-.logo {
-  align-self: flex-start;
-  height: 20px;
-  padding-left: 30px;
-  padding-top: 30px;
-}
-.lienHeader:hover {
-  color: var(--main-color);
-  border-top: 2px solid var(--main-color);
-}
-.lienHeader {
-  padding-top: 10px;
-}
-
-/***** Espace Recherche & Filtress*****/
-main {
-  margin: 30px;
-}
-/*Organisation Position & apparence de la barre de recherche*/
-.searchBar {
-  display: flex;
-  height: 49px;
-  width: 377px;
-  align-items: center;
-  margin: 30px 0px 30px 0px;
-}
-.positionPin {
-  background-color: var(--main-bg-color);
-  height: 18px;
-  width: 27px;
-  padding: 11px 0px 11px 15px;
-  border-radius: 12px 0px 0px 12px;
-}
-button {
-  color: white;
-  background-color: var(--main-color);
-  border: none;
-  margin-left: -5px;
-  padding: 8px 12px 11px 12px;
-  border-radius: 0px 12px 12px 0px;
-  font-weight: 700;
-  font-size: 18px;
-}
-#search {
-  height: 40px;
-  width: 200px;
-  border: none;
-  border-top: 1px solid var(--main-bg-color);
-  border-bottom: 1px solid var(--main-bg-color);
-  padding: 11px;
+ul {
+  list-style-type: none;
 }
 ::placeholder {
+  /*Visuel des éléments placeholder*/
   text-align: center;
   color: black;
   opacity: 1;
   font-weight: 700;
   font-size: 18px;
 }
-
-/*Temporaire - pour cacher la loupe de la version mobile*/
-#loupe {
-  display: none;
+.neutral-star {
+  color: var(--main-bg-color);
+}
+.euro {
+  font-weight: 700;
 }
 
-/*Organisation & Apparence de l'espace Filtres*/
+/***** Header *****/
+/*Disposition boxHeader*/
+.boxHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 50px;
+}
+/*Disposition des 3 éléments du header + Placement*/
+.lienHeader {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding-top: 0px;
+}
+.lienHeader li a {
+  /*Apparence des deux liens du nav*/
+  display: inline-block;
+  padding-top: 10px;
+}
+/*Effet au survol*/
+.lienHeader li a:hover {
+  border-top: 2px solid var(--main-color);
+  color: var(--main-color);
+}
+.logo {
+  /*Placement & Dimension du logo*/
+  height: 20px;
+  margin-top: 30px;
+}
+/***** Espace Recherche & Filtres*****/
+.searchSpace article {
+  margin-bottom: 25px;
+}
+.searchBar {
+  /*Organisation de la barre de recherche*/
+  display: flex;
+  height: 50px;
+  width: 375px;
+  align-items: center;
+}
+.positionPin {
+  /*Pin de position fond + border*/
+  background-color: var(--main-bg-color);
+  height: 19px;
+  padding: 15px 17px;
+  border-radius: 15px 0px 0px 15px;
+}
+.searchForm {
+  /*Formulaire de recherche bordures + alignement*/
+  height: 47px;
+  align-content: center;
+  border-top: 1px solid var(--main-bg-color);
+  border-bottom: 1px solid var(--main-bg-color);
+}
+.searchForm input {
+  /*aspect visuel de l'input & dimension*/
+  border: none;
+  width: 180px;
+}
+button {
+  /*Modifications générales des éléments buttons*/
+  color: white;
+  background-color: var(--main-color);
+  border: none;
+  font-weight: 700;
+  font-size: 18px;
+}
+.btnTxt {
+  /*Modifications du bouton Rechercher*/
+  padding: 12.5px 15px 15px 14px;
+  border-radius: 0px 15px 15px 0px;
+}
+.btnLoupe {
+  /*Modifications du bouton Loupe*/
+  display: none;
+  margin-left: -10px;
+  padding: 14px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 5px #d2d2d2;
+}
+/*Organisation & Apparence des filtres*/
 .boxFilters {
   display: flex;
   align-items: center;
-  margin: 0px 0px 30px 0px;
   gap: 20px;
 }
-.filter{
-    border: 3px solid var(--main-bg-color);
-    padding: 10px;
-    border-radius: 25px;
+/*Personnalisation des filtres & positionnement*/
+.filtre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  border: 3px solid var(--main-bg-color);
+  padding: 10px 12px 10px 12px;
+  border-radius: 25px;
 }
-.filter:hover{
-    background-color: var(--filter-bg-color);
+/*Effet au survol du filtre*/
+.filtre:hover {
+  background-color: var(--filter-bg-color);
+}
+.infoTxt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/*****Hebergements & Populaires*****/
+/*Disposition des deux box Hebergements + Fond Visuel*/
+.boxHebergementGlobale {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.boxHebergementGlobale section {
+  background-color: var(--main-bg-color);
+  border-radius: 20px;
+  padding: 30px;
+}
+/*****Hebergements*****/
+.carte {
+  background-color: white;
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+.carte img {
+  object-fit: cover;
+}
+/*Attribue une largeur*/
+.boxHebergement {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  gap: 30px;
+}
+.boxCartesHebergements {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 30px;
+}
+.cartesHebergements {
+  width: 85%;
+  height: 205px;
+}
+.cartesHebergements .carte {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 190px;
+}
+.cartesHebergements img {
+  width: 100%;
+  height: 120px;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+.cartesHebergements .contenuCarte {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.cartesHebergements .titreCarte {
+  margin-top: 5px;
+  margin-bottom: 4px;
+}
+.cartesHebergements .sousTitreCarte {
+  margin: 0;
+}
+.cartesHebergements .NoteCarte {
+  margin-bottom: 5px;
+}
+/*****Populaires*****/
+/*Attribue une largeur*/
+.boxPopulaires {
+  width: 35%;
+}
+/*Organisation de la ligne titre*/
+.titrePopulaires {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Disposition & Affichage visuel fond Cartes*/
+.cartesPopulaires .carte {
+  display: flex;
+  margin-top: 30px;
+}
+/*Modification img dimension & border radius*/
+.cartesPopulaires img {
+  width: 27%;
+  height: 135px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  object-fit: cover;
+}
+/*Modification du contenu(txt) pour qu'il occupe l'espace restant de la carte */
+.cartesPopulaires .contenuCarte {
+  width: 62%;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+/*Modification positionnement dans la carte du txt*/
+.cartesPopulaires .titreCarte {
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+.cartesPopulaires .sousTitreCarte {
+  margin: 0;
+}
+.cartesPopulaires .NoteCarte {
+  margin-bottom: 5px;
+}
+
+/*****Espace Activités*****/
+.sectionActivites {
+  margin-left: 30px;
+}
+.boxCartesActivites {
+  margin-bottom: 50px;
+  width: 100%;
+  height: 500px;
+}
+.CartesActivites img {
+  width: 100%;
+  height: 400px;
+  border-radius: 25px 25px 0 0;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.CartesActivites {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.CartesActivites a {
+  width: 25%;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  background-color: white;
+  border-radius: 25px;
+  padding-bottom: 20px;
+}
+.activiteTxt {
+  margin-left: 15px;
+}
+.titreActivites {
+  margin-bottom: 30px;
+}
+/*****Footer*****/
+footer {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 50px;
+}
+/*Box Footer Globale*/
+.boxFooterGlobale {
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  column-gap: 300px;
+}
+.boxFooterGlobale ul {
+  font-size: 14px;
+  font-weight: 400;
+}
+.boxFooterGlobale h2 {
+  margin-bottom: 15px;
+}
+.boxFooterGlobale li {
+  margin-bottom: 15px;
+}
+/*****Media queries*****/
+/*Affichage de la loupe ou du bouton rechercher*/
+@media (max-width: 768px) {
+  .btnTxt {
+    display: none;
+  }
+  .btnLoupe {
+    display: inline-block;
+  }
 }
