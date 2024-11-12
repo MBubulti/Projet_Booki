@@ -1,159 +1,201 @@
-/****** General ***********/
+/*** General ***/
+/*Modifications Globales*/
 * {
   font-family: "Raleway", sans-serif;
   padding: 0;
   margin: 0;
 }
-/* Définition du code couleur qui seront mobilisés à travers tout le css dans :root
-On utilise des propriétés personnalisées -- qui permettront d'être rappelée ensuite dans le doc*/
+
+/* Définition du code couleur général*/
 :root {
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
   --filter-bg-color: #deebff;
 }
-main {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 50px;
+
+/*Modification globale des éléments txt*/
+a {
+  color: inherit;
+  text-decoration: none;
 }
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.euro {
+  font-weight: 700;
+}
+
+section {
+  margin-bottom: 25px;
+}
+
+/*Modification des éléments Font Awesome*/
+.fa-info {
+  border-color: #f2f2f2;
+  padding: 11px 10px 11px 10px;
+  border-radius: 100%;
+  border-width: 2px;
+}
+
+.fa-magnifying-glass {
+  color: white;
+}
+
+.fa-location-dot {
+  color: black;
+}
+
+.fa-solid {
+  color: var(--main-color);
+}
+
+.neutral-star {
+  color: var(--main-bg-color);
+}
+
+/*** Header ***/
 header {
   box-sizing: border-box;
   width: 100%;
   max-width: 1440px;
   margin: 0 50px;
 }
-.fa-solid {
+/*Disposition box-header*/
+.box-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+/*Disposition des 3 éléments du header + Placement*/
+.lien-header {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding-top: 0px;
+}
+
+/*Apparence des deux liens du nav*/
+.lien-header li a {
+  display: inline-block;
+  padding-top: 10px;
+  border-top: 2px solid white;
+}
+
+/*Effet au survol des liens nav*/
+.lien-header li a:hover {
+  border-top: 2px solid var(--main-color);
   color: var(--main-color);
 }
-.black {
-  color: black;
+
+/*Placement & Dimension du logo*/
+.logo {
+  height: 20px;
+  margin-top: 30px;
 }
-a {
-  color: inherit;
-  text-decoration: none;
+
+/***Main***/
+main {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 50px;
 }
-p {
-  font-size: 18px;
-  font-weight: 400;
+
+/***Espace Recherche***/
+/*Organisation de la barre de recherche*/
+.barre-recherche {
+  display: flex;
+  height: 50px;
+  width: 375px;
+  align-items: center;
 }
-h1 {
-  font-size: 25px;
-  font-weight: 700;
+
+/*Pin de position fond + border*/
+.pin-position {
+  background-color: var(--main-bg-color);
+  height: 19px;
+  padding: 15px 17px;
+  border-radius: 15px 0px 0px 15px;
 }
-h2 {
-  font-size: 20px;
-  font-weight: 700;
+
+/*Formulaire de recherche bordures + alignement*/
+.formulaire-recherche {
+  height: 47px;
+  align-content: center;
+  border-top: 1px solid var(--main-bg-color);
+  border-bottom: 1px solid var(--main-bg-color);
 }
-h3 {
-  font-size: 18px;
-  font-weight: 700;
+
+/*aspect visuel de l'input & dimension*/
+.formulaire-recherche input {
+  border: none;
+  width: 180px;
 }
-ul {
-  list-style-type: none;
-}
+
+/*Visuel des éléments placeholder*/
 ::placeholder {
-  /*Visuel des éléments placeholder*/
   text-align: center;
   color: black;
   opacity: 1;
   font-weight: 700;
   font-size: 18px;
 }
-.neutral-star {
-  color: var(--main-bg-color);
-}
-.euro {
-  font-weight: 700;
-}
 
-/***** Header *****/
-/*Disposition boxHeader*/
-.boxHeader {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 50px;
-}
-/*Disposition des 3 éléments du header + Placement*/
-.lienHeader {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  padding-top: 0px;
-}
-.lienHeader li a {
-  /*Apparence des deux liens du nav*/
-  display: inline-block;
-  padding-top: 10px;
-}
-/*Effet au survol*/
-.lienHeader li a:hover {
-  border-top: 2px solid var(--main-color);
-  color: var(--main-color);
-}
-.logo {
-  /*Placement & Dimension du logo*/
-  height: 20px;
-  margin-top: 30px;
-}
-/***** Espace Recherche & Filtres*****/
-.searchSpace article {
-  margin-bottom: 25px;
-}
-.searchBar {
-  /*Organisation de la barre de recherche*/
-  display: flex;
-  height: 50px;
-  width: 375px;
-  align-items: center;
-}
-.positionPin {
-  /*Pin de position fond + border*/
-  background-color: var(--main-bg-color);
-  height: 19px;
-  padding: 15px 17px;
-  border-radius: 15px 0px 0px 15px;
-}
-.searchForm {
-  /*Formulaire de recherche bordures + alignement*/
-  height: 47px;
-  align-content: center;
-  border-top: 1px solid var(--main-bg-color);
-  border-bottom: 1px solid var(--main-bg-color);
-}
-.searchForm input {
-  /*aspect visuel de l'input & dimension*/
-  border: none;
-  width: 180px;
-}
+/*Modifications générales des éléments buttons*/
 button {
-  /*Modifications générales des éléments buttons*/
   color: white;
   background-color: var(--main-color);
   border: none;
   font-weight: 700;
   font-size: 18px;
 }
-.btnTxt {
-  /*Modifications du bouton Rechercher*/
+
+/*Modifications du bouton Rechercher*/
+.btn-txt {
   padding: 12.5px 15px 15px 14px;
   border-radius: 0px 15px 15px 0px;
 }
-.btnLoupe {
-  /*Modifications du bouton Loupe*/
+
+/*Modifications du bouton Loupe*/
+.btn-loupe {
   display: none;
   margin-left: -10px;
   padding: 14px;
   border-radius: 15px;
   box-shadow: 0px 3px 5px #d2d2d2;
 }
+
 /*Organisation & Apparence des filtres*/
-.boxFilters {
+.box-filtres {
   display: flex;
   align-items: center;
   gap: 20px;
 }
+
 /*Personnalisation des filtres & positionnement*/
 .filtre {
   display: flex;
@@ -164,194 +206,232 @@ button {
   padding: 10px 12px 10px 12px;
   border-radius: 25px;
 }
+
 /*Effet au survol du filtre*/
 .filtre:hover {
   background-color: var(--filter-bg-color);
 }
-.infoTxt {
+
+.info-txt {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-/*****Hebergements & Populaires*****/
+
+/***Hebergements & Populaires***/
 /*Disposition des deux box Hebergements + Fond Visuel*/
-.boxHebergementGlobale {
+.box-hebergement-globale {
   display: flex;
   justify-content: space-between;
   gap: 30px;
   margin-bottom: 50px;
 }
-.boxHebergementGlobale section {
+
+.box-hebergement-globale section {
   background-color: var(--main-bg-color);
   border-radius: 20px;
   padding: 30px;
 }
-/*****Hebergements*****/
+
+/*Apparence des cartes*/
 .carte {
   background-color: white;
   border-radius: 25px;
   padding: 5px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
+
 .carte img {
   object-fit: cover;
 }
-/*Attribue une largeur*/
-.boxHebergement {
+
+/***Hebergements***/
+.box-hebergement {
   display: flex;
   flex-direction: column;
   width: 65%;
   gap: 30px;
 }
-.boxCartesHebergements {
+
+.box-cartes-hebergements {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
   row-gap: 30px;
 }
-.cartesHebergements {
-  width: 85%;
+
+.cartes-hebergements {
+  width: 100%;
   height: 205px;
 }
-.cartesHebergements .carte {
+
+.cartes-hebergements .carte {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 190px;
 }
-.cartesHebergements img {
+
+.cartes-hebergements img {
   width: 100%;
   height: 120px;
   border-radius: 20px 20px 0 0;
   object-fit: cover;
 }
-.cartesHebergements .contenuCarte {
+
+.cartes-hebergements .contenu-carte {
   padding-left: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
 }
-.cartesHebergements .titreCarte {
+
+.cartes-hebergements .titre-carte {
   margin-top: 5px;
-  margin-bottom: 4px;
-}
-.cartesHebergements .sousTitreCarte {
-  margin: 0;
-}
-.cartesHebergements .NoteCarte {
   margin-bottom: 5px;
 }
-/*****Populaires*****/
-/*Attribue une largeur*/
-.boxPopulaires {
-  width: 35%;
+
+.cartes-hebergements .sous-titre-carte {
+  margin: 0;
 }
+
+.cartes-hebergements .note-carte {
+  margin-bottom: 5px;
+}
+
+/*****Populaires*****/
+.box-populaires {
+  width: 30%;
+}
+
 /*Organisation de la ligne titre*/
-.titrePopulaires {
+.titre-populaires {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 /*Disposition & Affichage visuel fond Cartes*/
-.cartesPopulaires .carte {
+.cartes-populaires .carte {
   display: flex;
   margin-top: 30px;
 }
+
 /*Modification img dimension & border radius*/
-.cartesPopulaires img {
+.cartes-populaires img {
   width: 27%;
   height: 135px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   object-fit: cover;
 }
+
 /*Modification du contenu(txt) pour qu'il occupe l'espace restant de la carte */
-.cartesPopulaires .contenuCarte {
-  width: 62%;
+.cartes-populaires .contenu-carte {
+  width: 63%;
   padding-left: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
 }
+
 /*Modification positionnement dans la carte du txt*/
-.cartesPopulaires .titreCarte {
+.cartes-populaires .titre-carte {
   margin-top: 10px;
   margin-bottom: 4px;
 }
-.cartesPopulaires .sousTitreCarte {
+
+.cartes-populaires .sous-titre-carte {
   margin: 0;
 }
-.cartesPopulaires .NoteCarte {
+
+.cartes-populaires .note-carte {
   margin-bottom: 5px;
 }
 
 /*****Espace Activités*****/
-.sectionActivites {
+.section-activites {
   margin-left: 30px;
 }
-.boxCartesActivites {
+
+.box-cartes-activites {
   margin-bottom: 50px;
   width: 100%;
   height: 500px;
 }
-.CartesActivites img {
+
+.cartes-activites img {
   width: 100%;
   height: 400px;
   border-radius: 25px 25px 0 0;
   object-fit: cover;
   margin-bottom: 10px;
 }
-.CartesActivites {
+
+.cartes-activites {
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
-.CartesActivites a {
+
+.cartes-activites a {
   width: 25%;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   background-color: white;
   border-radius: 25px;
   padding-bottom: 20px;
 }
-.activiteTxt {
+
+.activite-txt {
   margin-left: 15px;
 }
-.titreActivites {
+.titre-activites {
   margin-bottom: 30px;
 }
-/*****Footer*****/
+
+/***Footer***/
 footer {
   width: 100%;
   max-width: 1440px;
   margin: 0 50px;
 }
-/*Box Footer Globale*/
-.boxFooterGlobale {
+
+footer section {
+  margin: 0;
+}
+
+/*Modifications Box Footer Globale*/
+.box-footer-globale {
   background-color: var(--main-bg-color);
   display: flex;
   flex-direction: row;
   padding: 20px;
   column-gap: 300px;
 }
-.boxFooterGlobale ul {
+
+.box-footer-globale ul {
   font-size: 14px;
   font-weight: 400;
 }
-.boxFooterGlobale h2 {
+
+.box-footer-globale h2 {
   margin-bottom: 15px;
 }
-.boxFooterGlobale li {
+
+.box-footer-globale li {
+  font-size: 18px;
   margin-bottom: 15px;
 }
-/*****Media queries*****/
+
+/***Media queries***/
 /*Affichage de la loupe ou du bouton rechercher*/
 @media (max-width: 768px) {
-  .btnTxt {
+  .btn-txt {
     display: none;
   }
-  .btnLoupe {
+  .btn-loupe {
     display: inline-block;
   }
 }
