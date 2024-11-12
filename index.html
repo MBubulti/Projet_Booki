@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booki</title>
     <!--Import de Google Fonts - raleway & import de Font Awesome-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!--crossorigin permet le chargement des ressources d'origines multiples (CORS), permet d'éviter de faire une requête de chargement par serveur ou port-->
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet">
     <!--Il est précisé ici les différentes épaisseurs 400/500/700 et l'option display swap en cas de soucis de chargement-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
+      referrerpolicy="no-referrer">
     <!--integrity assure qu'il n'y ait pas de modifications de l'élément pendant le chargement du lien & referrer policy en no referrer n'envoie aucune information via l'url-->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
@@ -28,7 +28,7 @@
           class="logo"
           src="images/logo/Booki.png"
           alt="Logo du site Booki"
-          title="Logo Booki" />
+          title="Logo Booki">
           <nav class="navLien">
             <ul class="lien-header">
               <li><a href="#titre-carte-hebergements">Hébergements</a></li>
@@ -43,15 +43,15 @@
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre-ville ou en pleine nature</p>
       </section>
-      <!--Section Barre de recherche-->
-      <section class="barre-recherche">
+      <!--Div Barre de recherche car validator W3C le recommande si pas de titre dans le bloc-->
+      <div class="barre-recherche">
         <!--Icone Position-->
         <div class="pin-position">
           <i class="fa-solid fa-location-dot"></i>
         </div>
         <!--Formulaire Recherche-->
         <div class="formulaire-recherche">
-          <form action="" method="get" id="form">
+          <form action="#" method="get" id="form">
             <input
               type="search"
               name="lieu"
@@ -68,7 +68,7 @@
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
-      </section>
+      </div>
       <!--Section Filtre-->
       <section class="box-filtres">
         <h2>Filtres</h2>
@@ -97,11 +97,11 @@
           </div>
         </a>
       </section>
-      <!--Section pour l'information-->
-      <section class="info-txt">
+      <!--Div pour l'information car validator W3C le recommande si pas de titre dans le bloc-->
+      <div class="info-txt">
         <i class="fa-solid fa-info fa-border fa-xs"></i>
         <p>Plus de 500 logements disponibles dans cette ville</p>
-      </section>
+      </div>
       <!--Zone des cartes Hebergements & Populaires-->
       <div class="box-hebergement-globale">
         <!--Section Hebergements-->
@@ -114,7 +114,7 @@
                 <article class="carte">
                   <img
                     src="./images/hebergements/fred-kleber.jpg"
-                    alt="Une chambre spatieuse avec deux lits simples" />
+                    alt="Une chambre spatieuse avec deux lits simples">
                   <div class="contenu-carte">
                     <div class="txt-carte">
                       <h3 class="titre-carte">Hôtel du port</h3>
@@ -140,7 +140,7 @@
                 <article class="carte">
                   <img
                     src="./images/hebergements/febrian-zakaria.jpg"
-                    alt="Une chambre avec un lit et une télé" />
+                    alt="Une chambre avec un lit et une télé">
                   <div class="contenu-carte">
                     <div class="txt-carte">
                       <h3 class="titre-carte">Hôtel Chez Amina</h3>
@@ -166,7 +166,7 @@
                 <article class="carte">
                   <img
                     src="./images/hebergements/reisetopia.jpg"
-                    alt="Une chambre spatieuse avec lit double et dressing" />
+                    alt="Une chambre spatieuse avec lit double et dressing">
                   <div class="contenu-carte">
                     <div class="txt-carte">
                       <h3 class="titre-carte">Hôtel Les mouettes</h3>
@@ -192,7 +192,7 @@
                 <article class="carte">
                   <img
                     src="./images/hebergements/annie-spratt.jpg"
-                    alt="Une chambre spatieuse avec lit double et un tableau de la mer" />
+                    alt="Une chambre spatieuse avec lit double et un tableau de la mer">
                   <div class="contenu-carte">
                     <div class="txt-carte">
                       <h3 class="titre-carte">Hôtel de la mer</h3>
@@ -218,7 +218,7 @@
                 <article class="carte">
                   <img
                     src="./images/hebergements/marcus-loke.jpg"
-                    alt="Une chambre dortoir avec lits superposés en métal" />
+                    alt="Une chambre dortoir avec lits superposés en métal">
                   <div class="contenu-carte">
                     <div class="txt-carte">
                       <h3 class="titre-carte">Auberge La Canebière</h3>
@@ -244,7 +244,7 @@
                 <article class="carte">
                   <img
                     src="./images/hebergements/nicate-lee.jpg"
-                    alt="Une chambre avec des lits superposés en bois" />
+                    alt="Une chambre avec des lits superposés en bois">
                   <div class="contenu-carte">
                     <div class="txt-carte">
                       <h3 class="titre-carte">Auberge Le Panier</h3>
@@ -281,7 +281,7 @@
               <article class="carte">
                 <img
                   src="./images/hebergements/emile-guillemot.jpg"
-                  alt="Image de la chambre d'hôtel montrant un lit" />
+                  alt="Image de la chambre d'hôtel montrant un lit">
                 <div class="contenu-carte">
                   <div class="txt-carte">
                     <h3 class="titre-carte">Hôtel Le soleil du matin</h3>
@@ -307,7 +307,7 @@
               <article class="carte">
                 <img
                   src="./images/hebergements/aw-creative.jpg"
-                  alt="Image de la chambre d'hôtel montrant un lit" />
+                  alt="Image de la chambre d'hôtel montrant un lit">
                 <div class="contenu-carte">
                   <div class="txt-carte">
                     <h3 class="titre-carte">
@@ -335,7 +335,7 @@
               <article class="carte">
                 <img
                   src="./images/hebergements/febrian-zakaria2.jpg"
-                  alt="Image de la chambre d'hôtel montrant un lit" />
+                  alt="Image de la chambre d'hôtel montrant un lit">
                 <div class="contenu-carte">
                   <div class="txt-carte">
                     <h3 class="titre-carte">Hôtel Bleu et Blanc</h3>
@@ -369,47 +369,41 @@
                 <img
                   src="./images/activites/reno-laithienne.jpg"
                   alt="Une photo du vieux-port">
-              </article>
-              <div class="activite-txt">
                 <h3>Vieux-port</h3>
-              </div>
+              </article>
             </a>
             <a href="#">
               <article>
                 <img
                   src="./images/activites/paul-hermann.jpg"
                   alt="Une photo du fort de Pomègues">
-              </article>
-              <div class="activite-txt">
+
                 <h3>Fort de Pomègues</h3>
-              </div>
+              </article>
             </a>
             <a href="#">
               <article>
                 <img
                   src="./images/activites/kilyan-sockalingum.jpg"
                   alt="Une photo du parc national des Calanques">
-              </article>
-              <div class="activite-txt">
                 <h3>Parc national des Calanques</h3>
-              </div>
+              </article>
             </a>
             <a href="#">
               <article>
                 <img
                   src="./images/activites/florian-wehde.jpg"
                   alt="Une photo de Notre-Dame-de-la-Garde">
-              </article>
-              <div class="activite-txt">
+
                 <h3>Notre-Dame-de-la-Garde</h3>
-              </div>
+              </article>
             </a>
           </div>
         </div>
       </section>
     </main>
-    <footer>
-      <section class="box-footer-globale">
+    <footer >
+      <div class="box-footer-globale">
         <article>
           <h2>À propos</h2>
           <ul>
@@ -432,7 +426,7 @@
             <li>Nous contacter</li>
           </ul>
         </article>
-      </section>
+      </div>
     </footer>
   </body>
 </html>
