@@ -10,6 +10,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 50px;
 }
 
 /* Définition du code couleur général*/
@@ -128,7 +129,6 @@ main {
   box-sizing: border-box;
   width: 100%;
   max-width: 1440px;
-  margin: 0 50px;
 }
 
 /***Espace Recherche***/
@@ -230,7 +230,6 @@ button {
 /*Disposition des deux box Hebergements + Fond Visuel*/
 .box-hebergement-globale {
   display: flex;
-  justify-content: space-between;
   gap: 30px;
   margin-bottom: 50px;
 }
@@ -321,6 +320,11 @@ button {
 }
 
 /*Disposition & Affichage visuel fond Cartes*/
+.cartes-populaires{
+  display: flex;
+  flex-direction: column;
+}
+
 .cartes-populaires .carte {
   display: flex;
   margin-top: 30px;
@@ -361,35 +365,34 @@ button {
 
 /*****Espace Activités*****/
 .section-activites {
-  margin-left: 30px;
-}
-
-.box-cartes-activites {
+  margin: 0 30px;
   margin-bottom: 50px;
-  width: 100%;
-  height: 500px;
 }
 
 .cartes-activites img {
   width: 100%;
-  height: 400px;
+  height: 350px;
   border-radius: 25px 25px 0 0;
   object-fit: cover;
-  margin-bottom: 10px;
 }
 
 .cartes-activites {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+}
+
+.cartes-activites article{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
 }
 
 .cartes-activites a {
-  width: 25%;
+  width: 23%;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   background-color: white;
   border-radius: 25px;
-  padding-bottom: 20px;
 }
 
 .cartes-activites h3{
@@ -405,7 +408,6 @@ footer {
   background-color: var(--main-bg-color);
   width: 100%;
   max-width: 1440px;
-  margin: 0 50px;
 }
 
 footer section {
@@ -452,12 +454,56 @@ footer section {
   }
 }
 
-/*Permet d'ajuster la taille de la police afin que les éléments ne débordent pas des cartes*/
-@media (min-width: 1024px) and (max-width:1180px) {
+/*Permet d'ajuster la taille de la police afin que les éléments ne débordent pas des cartes version Desktop*/
+@media (width<1280px) {
   .cartes-hebergements .titre-carte{
     font-size: smaller;
   }
   .cartes-hebergements .sous-titre-carte{
     font-size: smaller;
+  }
+}
+
+/*Modifications pour  l'affichage tablette - box hebergement et populaires*/
+@media (min-width:768px) and (max-width:1024px) {
+  .box-hebergement-globale{
+    flex-direction: column;
+    }
+
+  .box-hebergement{
+    width: 92%;
+  }
+
+  .box-populaires{
+    width: 92%;
+  }
+
+  .cartes-populaires{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .cartes-populaires a{
+    width: 32%;
+  }
+
+  .cartes-populaires .titre-carte {
+    font-size: smaller;
+  }
+  
+  .cartes-populaires .sous-titre-carte{
+    font-size: smaller;
+  }
+}
+
+/*Modifications pour l'affichage tablette - Activités*/
+@media(min-width:768px) and (max-width:1024px) {
+  .cartes-activites img {
+    width: 100%;
+    height: 150px;
+  }
+  .cartes-activites h3{
+    font-size: 16px;
   }
 }
