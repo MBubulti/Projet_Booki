@@ -394,6 +394,7 @@ button {
 
 /***Footer***/
 footer {
+  background-color: var(--main-bg-color);
   width: 100%;
   max-width: 1440px;
   margin: 0 50px;
@@ -405,11 +406,17 @@ footer section {
 
 /*Modifications Box Footer Globale*/
 .box-footer-globale {
-  background-color: var(--main-bg-color);
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
   padding: 20px;
-  column-gap: 300px;
+}
+
+.box-footer-globale article{
+  flex: 1 1 200px;
+  max-width: 200px;
+  margin-bottom: 20px;
 }
 
 .box-footer-globale ul {
