@@ -444,15 +444,7 @@ footer section {
 }
 
 /***Media queries***/
-/*Affichage de la loupe ou du bouton rechercher*/
-@media (max-width: 768px) {
-  .btn-txt {
-    display: none;
-  }
-  .btn-loupe {
-    display: inline-block;
-  }
-}
+
 
 /*Permet d'ajuster la taille de la police afin que les éléments ne débordent pas des cartes version Desktop*/
 @media (width<1280px) {
@@ -463,17 +455,19 @@ footer section {
     font-size: smaller;
   }
 }
-
-/*Modifications pour  l'affichage tablette - box hebergement et populaires*/
+/***Responsive Tablette***/
+/*Modifications pour  l'affichage tablette*/
 @media (min-width:768px) and (max-width:1024px) {
   .box-hebergement-globale{
     flex-direction: column;
     }
 
+  /*Partie Populaires*/
   .box-hebergement{
     width: 92%;
   }
 
+  /*Partie Populaires*/
   .box-populaires{
     width: 92%;
   }
@@ -495,10 +489,8 @@ footer section {
   .cartes-populaires .sous-titre-carte{
     font-size: smaller;
   }
-}
 
-/*Modifications pour l'affichage tablette - Activités*/
-@media(min-width:768px) and (max-width:1024px) {
+  /*Partie Activités*/
   .cartes-activites img {
     width: 100%;
     height: 150px;
@@ -506,4 +498,82 @@ footer section {
   .cartes-activites h3{
     font-size: 16px;
   }
+}
+
+/***Responsive  Mobile***/
+@media (max-width: 767px) {
+
+  body{
+    margin: 0;
+  }
+
+  /*Affichage de la loupe ou du bouton rechercher*/
+  .btn-txt {
+    display: none;
+  }
+  .btn-loupe {
+    display: inline-block;
+  }
+
+  /*Modification du header*/
+  .box-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .logo{
+    align-self: center;
+    margin-bottom: 20px;
+  }
+
+  .box-header nav{
+    display: flex;
+
+  }
+  .lien-header{
+    display: flex;
+    width: 100%;
+    gap: 0;
+    padding: 0;
+  }
+
+  /*Ajout d'effet de survol en dessous*/
+  .lien-header li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--main-bg-color);
+  }
+
+  .lien-header li:hover{
+    border: none;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--main-color);
+    color: var(--main-color);
+  }
+
+  /*Cacher les effets au-dessus*/
+  .lien-header li a{
+    padding: 0;
+    border: none;
+  }
+
+  .lien-header li a:hover{
+    border: none;
+  }
+
+  .section-titre{
+    margin: 0 20px 30px 30px;
+  }
+
+  .barre-recherche{
+    margin:0 20px 30px 30px ;
+  }
+
+  .box-filtres{
+    flex-wrap: wrap;
+  }
+
 }
