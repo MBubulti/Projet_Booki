@@ -6,6 +6,12 @@
   margin: 0;
 }
 
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Définition du code couleur général*/
 :root {
   --main-color: #0065fc;
@@ -59,16 +65,16 @@ section {
   border-width: 2px;
 }
 
+.fa-solid {
+  color: var(--main-color);
+}
+
 .fa-magnifying-glass {
   color: white;
 }
 
 .fa-location-dot {
   color: black;
-}
-
-.fa-solid {
-  color: var(--main-color);
 }
 
 .neutral-star {
@@ -132,6 +138,7 @@ main {
   height: 50px;
   width: 375px;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 /*Pin de position fond + border*/
@@ -216,6 +223,7 @@ button {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 30px;
 }
 
 /***Hebergements & Populaires***/
@@ -254,14 +262,15 @@ button {
 }
 
 .box-cartes-hebergements {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   row-gap: 30px;
+  column-gap: 40px;
 }
 
 .cartes-hebergements {
-  width: 100%;
+  flex: 1 1 27.031%;
   height: 205px;
 }
 
@@ -283,21 +292,20 @@ button {
   padding-left: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
+  justify-content: space-around;
 }
 
 .cartes-hebergements .titre-carte {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .cartes-hebergements .sous-titre-carte {
-  margin: 0;
+  padding: 0;
 }
 
 .cartes-hebergements .note-carte {
-  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 /*****Populaires*****/
@@ -441,5 +449,15 @@ footer section {
   }
   .btn-loupe {
     display: inline-block;
+  }
+}
+
+/*Permet d'ajuster la taille de la police afin que les éléments ne débordent pas des cartes*/
+@media (min-width: 1024px) and (max-width:1180px) {
+  .cartes-hebergements .titre-carte{
+    font-size: smaller;
+  }
+  .cartes-hebergements .sous-titre-carte{
+    font-size: smaller;
   }
 }
