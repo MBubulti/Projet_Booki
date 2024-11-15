@@ -27,7 +27,7 @@ a {
 }
 
 p {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -42,7 +42,7 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -59,6 +59,10 @@ section {
 }
 
 /*Modification des éléments Font Awesome*/
+.fa-solid {
+  color: var(--main-color);
+}
+
 .fa-info {
   border-color: #f2f2f2;
   padding: 11px 10px 11px 10px;
@@ -66,19 +70,15 @@ section {
   border-width: 2px;
 }
 
-.fa-solid {
-  color: var(--main-color);
-}
-
-.fa-magnifying-glass {
+.fa-blanc {
   color: white;
 }
 
-.fa-location-dot {
+.fa-noir {
   color: black;
 }
 
-.neutral-star {
+.neutre {
   color: var(--main-bg-color);
 }
 
@@ -89,6 +89,7 @@ header {
   max-width: 1440px;
   margin: 0 50px;
 }
+
 /*Disposition box-header*/
 .box-header {
   display: flex;
@@ -414,55 +415,36 @@ footer {
   background-color: var(--main-bg-color);
   width: 100%;
   max-width: 1440px;
-}
-
-footer section {
-  margin: 0;
-}
-
-/*Modifications Box Footer Globale*/
-.box-footer-globale {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 100%;
   column-gap: 60px;
   padding: 20px;
 }
 
-.box-footer-globale article{
+footer article{
   flex: 1 1 200px;
   width: 100%;
   margin-bottom: 20px;
 }
 
-.box-footer-globale ul {
+footer ul {
   font-size: 14px;
   font-weight: 400;
 }
 
-.box-footer-globale h2 {
+footer h2 {
   margin-bottom: 15px;
 }
 
-.box-footer-globale li {
+footer li {
   font-size: 18px;
   margin-bottom: 15px;
 }
 
-/***Media queries***/
-/*Permet d'ajuster la taille de la police afin que les éléments ne débordent pas des cartes version Desktop*/
-@media (width<1280px) and (width>=768px) {
-  .cartes-hebergements .titre-carte{
-    font-size: smaller;
-  }
-  .cartes-hebergements .sous-titre-carte{
-    font-size: smaller;
-  }
-}
-/***Responsive Tablette***/
+/***Media queries - Responsive Tablette***/
 /*Modifications pour  l'affichage tablette*/
-@media (min-width:768px) and (max-width:1024px) {
+@media (width<=1024px) {
   .box-hebergement-globale{
     flex-direction: column;
   }
@@ -484,7 +466,6 @@ footer section {
   }
 
   .cartes-populaires{
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -515,19 +496,19 @@ footer section {
   }
 
   /*Partie Footer*/
-  .box-footer-globale {
+  footer {
     padding: 20px 15px 10px 20px;
     gap: 0;
   }
 
-  .box-footer-globale article{
+  footer article{
     margin-bottom: 0px;
   }
 
 }
 
-/***Responsive  Mobile***/
-@media (max-width: 767px) and (min-width: 320px) {
+/*** Media queries - Responsive  Mobile***/
+@media (width<768px) {
 
   body{
     min-width: 320px;
@@ -679,15 +660,20 @@ footer section {
   }
 
   .box-populaires div{
-    margin: 0px 10px;
+    margin: 0px 15px;
   }
 
   .titre-populaires{
     padding-top: 20px;
+    padding-right: 10px;
   }
 
   .cartes-populaires{
-    gap: 10px;
+    flex-direction: column;
+  }
+
+  .cartes-populaires a{
+    width: 98%;
   }
 
   .cartes-populaires .carte{
@@ -736,5 +722,16 @@ footer section {
 
   .cartes-activites img{
     height: 160px
+  }
+
+  /*Partie  Footer*/
+  footer{
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0 10px 40px;
+  }
+
+  footer article{
+    flex: none;
   }
 }
