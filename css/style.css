@@ -86,8 +86,7 @@ section {
 header {
   box-sizing: border-box;
   width: 100%;
-  max-width: 1440px;
-  margin: 0 50px;
+  max-width: 1340px;
 }
 
 /*Disposition box-header*/
@@ -129,7 +128,7 @@ header {
 main {
   box-sizing: border-box;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1340px;
 }
 
 /***Espace Recherche***/
@@ -137,7 +136,6 @@ main {
 .barre-recherche {
   display: flex;
   height: 50px;
-  width: 100%;
   align-items: center;
   margin-bottom: 30px;
 }
@@ -378,9 +376,10 @@ button {
 
 .cartes-activites img {
   width: 100%;
-  height: 350px;
+  height: 380px;
   border-radius: 25px 25px 0 0;
   object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .cartes-activites {
@@ -391,8 +390,7 @@ button {
 .cartes-activites article{
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .cartes-activites a {
@@ -406,6 +404,12 @@ button {
   margin-left: 15px;
 }
 
+.titre-photo{
+  display: flex;
+  align-items: center;
+  min-height: 38px
+}
+
 .titre-activites {
   margin-bottom: 30px;
 }
@@ -414,18 +418,18 @@ button {
 footer {
   background-color: var(--main-bg-color);
   width: 100%;
-  max-width: 1440px;
+  max-width: 1340px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   column-gap: 60px;
-  padding: 20px;
 }
 
 footer article{
   flex: 1 1 200px;
   width: 100%;
   margin-bottom: 20px;
+  padding: 20px;
 }
 
 footer ul {
@@ -489,10 +493,12 @@ footer li {
   }
   .cartes-activites img {
     width: 100%;
-    height: 160px;
+    height: 200px;
+    margin-bottom: 16px;
   }
-  .cartes-activites h3{
-    font-size: 16px;
+
+  .cartes-activites article{
+    padding-bottom: 16px;
   }
 
   /*Partie Footer*/
@@ -503,6 +509,7 @@ footer li {
 
   footer article{
     margin-bottom: 0px;
+    flex: 1 1 180px;
   }
 
 }
@@ -511,8 +518,7 @@ footer li {
 @media (width<768px) {
 
   body{
-    min-width: 320px;
-    max-width: 767px;
+    width: 100%;
     margin: 0;
   }
 
@@ -584,7 +590,7 @@ footer li {
   }
   /**Section Titre & Barre de recherche**/
   .section-titre{
-    margin: 0 40px 30px 10px;
+    margin: 0 20px 30px 20px;
   }
 
   .section-titre h1{
@@ -598,7 +604,7 @@ footer li {
   /*Agrandissement  de la barre de recherche*/
   .barre-recherche{
     justify-content: flex-start;
-    margin: 0 10px 30px 10px;
+    margin: 0 20px 30px 20px;
   }
 
   .pin-position{
@@ -612,18 +618,19 @@ footer li {
 
   .formulaire-recherche{
     height: 53px;
-    width: 65%;
+    width: 100%;
   }
 
   /**Partie Filtres**/
   .box-filtres-globale{
     flex-direction: column;
     align-items: flex-start;
-    margin: 0 10px;
+    margin: 0 20px;
   }
 
   .box-filtres{
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .box-filtres a{
@@ -631,12 +638,12 @@ footer li {
   }
 
   .filtre h3{
-    font-size: smaller;
+    font-size: 12px;
   }
 
   /*Info txt ajustée*/
   .info-txt{
-    margin: 30px 10px;
+    margin: 30px 20px;
   }
 
   /**Box Populaire & Hebergement**/
@@ -660,7 +667,7 @@ footer li {
   }
 
   .box-populaires div{
-    margin: 0px 15px;
+    margin: 0px 10px;
   }
 
   .titre-populaires{
@@ -721,17 +728,32 @@ footer li {
   }
 
   .cartes-activites img{
-    height: 160px
+    height: 140px;
+    margin-bottom: 11px;
+  }
+
+  .cartes-activites article{
+    padding-bottom: 11px;
   }
 
   /*Partie  Footer*/
   footer{
     flex-direction: column;
     gap: 20px;
-    padding: 20px 0 10px 40px;
+    padding: 0;
+    padding-top: 30px;
   }
 
   footer article{
     flex: none;
+    padding: 0;
+  }
+
+  footer h2{
+    padding-left: 20px;
+  }
+
+  footer ul{
+    padding-left: 20px;
   }
 }
