@@ -631,10 +631,13 @@ footer li {
   .box-filtres{
     flex-wrap: wrap;
     width: 100%;
+    gap: 0;
+    row-gap: 20px;
+    justify-content: space-between;
   }
 
   .box-filtres a{
-    width: 46%;
+    width: 49%;
   }
 
   .filtre h3{
